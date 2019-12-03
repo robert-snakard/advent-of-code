@@ -1,2 +1,2 @@
-# advent-of-gode
-Advent of Code done in Golang
+# advent-of-code
+Advent of Code repo
