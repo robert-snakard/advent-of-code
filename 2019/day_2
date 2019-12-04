@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+import operator
+
+input = open("input_2", "r").read()
+memory = list(map(int, input.split(',')))
+instructions = {
+    1: operator.add,
+    2: operator.mul
+}
+
+ip = 0;
+while memory[ip] != 99:
+    opcode = memory[ip]
+    ip += 1
+    addr1 = memory[ip]
+    ip += 1
+    addr2 = memory[ip]
+    ip += 1
+    retaddr = memory[ip]
+    ip += 1
+
+    memory[retaddr] = instructions[opcode](memory[addr1], memory[addr2])
+
+print(memory[0])
