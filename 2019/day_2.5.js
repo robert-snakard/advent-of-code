@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var fs = require('fs');
 
 var input = fs.readFileSync('input_2', 'utf8');
